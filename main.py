@@ -11,6 +11,8 @@ import numpy as np
 data = fetch_california_housing()
 X = data.data #features (8 columns: income, house age, rooms, etc.)
 y = data.target #target (house price in $100,000s)
+#fetch_calfornia_housing is a "Bunch" obejct and has multiple attributes, including .data and .target which are NumPy arrays
+#another approach is to load a csv (using pd), separate features and target into NumPy arrays (using .values), and optionally wrap in Bunch object
 
 print("Feature names: ", data.feature_names)
 #X.shape is a NumPy array attribute that tells you dimensions of array
