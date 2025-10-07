@@ -13,8 +13,10 @@ X = data.data #features (8 columns: income, house age, rooms, etc.)
 y = data.target #target (house price in $100,000s)
 
 print("Feature names: ", data.feature_names)
-print("Number of samples: ", X.shape[0])
-print("Number of features: ", X.shape[1])
+#X.shape is a NumPy array attribute that tells you dimensions of array
+#X.shape  Returns a tuple: (rows, columns) since X is a 2D array
+print("Number of samples: ", X.shape[0]) #first dimension is rows
+print("Number of features: ", X.shape[1]) #second dimension is cols, also is number of features using for training
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, 
